@@ -40,7 +40,9 @@ public class AbstractEvent {
     }
     public void publish(String json){
         if( json != null ){
-
+            System.out.println("========================================================================================");
+            System.out.println(json);
+            System.out.println("========================================================================================");
             /**
              * spring streams 방식
              */
