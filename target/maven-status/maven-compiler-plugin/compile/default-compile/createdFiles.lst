@@ -1,9 +1,0 @@
-skademy\PaymentCanceled.class
-skademy\PaymentSystem.class
-skademy\PolicyHandler.class
-skademy\PaymentSystemRepository.class
-skademy\PaymentSystemController.class
-skademy\Application.class
-skademy\AbstractEvent.class
-skademy\config\kafka\KafkaProcessor.class
-skademy\PaymentCompleted.class
