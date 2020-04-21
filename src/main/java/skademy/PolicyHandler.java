@@ -10,6 +10,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PolicyHandler{
-    
+    @StreamListener(KafkaProcessor.INPUT)
+    public void wheneverCourseCanceled_결제취소(@Payload CourseCanceled courseCanceled){
+
+        if(courseCanceled.isMe()){
+            System.out.println("##### listener 결제취소 : " + courseCanceled.toJson());
+        }
+    }
 
 }
