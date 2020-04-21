@@ -15,6 +15,12 @@ public class PaymentSystem {
 
     @PostPersist
     public void onPostPersist(){
+        try {
+            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         PaymentCompleted paymentCompleted = new PaymentCompleted();
         BeanUtils.copyProperties(this, paymentCompleted);
         paymentCompleted.publish();
